@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		FC5461CC2B815FE80069A5A5 /* CalcCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		FC54620E2B852FE30069A5A5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FCA8E9732B66B6E900043B61 /* CalculatorNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA8E9762B66B6E900043B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA8E9782B66B6E900043B61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +68,9 @@
 				FCA8E98C2B66DE8D00043B61 /* CalcCollectionViewCell.swift */,
 				FCA8E97C2B66B6E900043B61 /* Main.storyboard */,
 				FCA8E97F2B66B6EB00043B61 /* Assets.xcassets */,
-				FCA8E9812B66B6EB00043B61 /* LaunchScreen.storyboard */,
 				FCA8E9842B66B6EB00043B61 /* Info.plist */,
+				FCA8E9812B66B6EB00043B61 /* LaunchScreen.storyboard */,
+				FC54620E2B852FE30069A5A5 /* README.md */,
 			);
 			path = CalculatorNew;
 			sourceTree = "<group>";
