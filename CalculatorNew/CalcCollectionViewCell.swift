@@ -9,59 +9,52 @@ import UIKit
 
 class CalcCollectionViewCell: UICollectionViewCell {
     static let identifier = "CalcCollectionViewCell"
-    
-    private let numberImageView: UIImageView = {
-        let numberImageView = UIImageView()
-        numberImageView.contentMode = .scaleAspectFill
-        numberImageView.clipsToBounds = true
-        return numberImageView
+            
+    let calKeyLabel: UILabel = {
+        let calKeyLabel = UILabel()
+        calKeyLabel.translatesAutoresizingMaskIntoConstraints = false
+        calKeyLabel.layer.masksToBounds = false
+        calKeyLabel.layer.cornerRadius = 5.0
+        calKeyLabel.textAlignment = .center
+        calKeyLabel.font = UIFont.boldSystemFont(ofSize: 40.0)
+        return calKeyLabel
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        numberImageView.frame = contentView.bounds
-        struct S { static var index = 0 }
-
-        var numberImages = [UIImage]()
+        contentView.addSubview(calKeyLabel)
+        NSLayoutConstraint.activate([
+            calKeyLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            calKeyLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            calKeyLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 0),
+            calKeyLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0)
+        ])
+        contentView.layer.masksToBounds = true
         
-        numberImages.append(UIImage(named: "Clear")!)
-        numberImages.append(UIImage(named: "plusMinus")!)
-        numberImages.append(UIImage(named: "percentage")!)
-        numberImages.append(UIImage(named: "divide")!)
+        let numCols: CGFloat = 4
+        let screenWidth = UIScreen.main.bounds.width - 25
+        let cellWidth: CGFloat = screenWidth / numCols
         
-        numberImages.append(UIImage(named: "seven")!)
-        numberImages.append(UIImage(named: "eight")!)
-        numberImages.append(UIImage(named: "nine")!)
-        numberImages.append(UIImage(named: "mult")!)
-
-        numberImages.append(UIImage(named: "four")!)
-        numberImages.append(UIImage(named: "five")!)
-        numberImages.append(UIImage(named: "six")!)
-        numberImages.append(UIImage(named: "minus")!)
-        
-        numberImages.append(UIImage(named: "one")!)
-        numberImages.append(UIImage(named: "two")!)
-        numberImages.append(UIImage(named: "three")!)
-        numberImages.append(UIImage(named: "plus")!)
-        
-        numberImages.append(UIImage(named: "zero")!)
-        numberImages.append(UIImage(named: "dot")!)
-        numberImages.append(UIImage(named: "equal")!)
-        numberImageView.image = numberImages[S.index]
-        S.index = S.index + 1
+        contentView.layer.cornerRadius = cellWidth / 2
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.addSubview(numberImageView)
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
-        numberImageView.image = nil
+    }
+    
+    func configure(viewModel: CalcCollectionViewCellViewModel) {
+        calKeyLabel.text = viewModel.title
+        contentView.backgroundColor = viewModel.btnBackgroundColor
+    }
+    
+    private func getRandomColor()->UIColor{
+        let red = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        let green = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        let blue = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        return UIColor.init(red: red, green: green, blue: blue, alpha: 1)
     }
 }
