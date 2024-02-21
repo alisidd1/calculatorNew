@@ -50,11 +50,4 @@ class CalcCollectionViewCell: UICollectionViewCell {
         calKeyLabel.text = viewModel.title
         contentView.backgroundColor = viewModel.btnBackgroundColor
     }
-    
-    private func getRandomColor()->UIColor{
-        let red = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let green = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let blue = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        return UIColor.init(red: red, green: green, blue: blue, alpha: 1)
-    }
 }
