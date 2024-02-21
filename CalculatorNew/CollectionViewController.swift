@@ -10,11 +10,18 @@ import UIKit
 
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var number1 = 0, number2 = 0, operation = 0 // operartion 1=add, 2=sub, 3=div, 4=mul,  5=modulo
+    var firstNumber = 0, secondNumber = 0, operation = 0 // operartion 1=add, 2=sub, 3=div, 4=mul,  5=modulo
     var calcIntermediateResult = 0
     var lastNumberTapped = 0
+    var nextNumberTapped = 0
     var operationToPerform = 0
-
+    private let _view = CollectionView()
+    
+    override func loadView() {
+        super.loadView()
+        view = _view
+    }
+    
     let viewModels = [
         CalcCollectionViewCellViewModel(title: "AC", btnBackgroundColor: .systemGray, type: 1),  // 0 = value,   1= operfation
         CalcCollectionViewCellViewModel(title: "+/-", btnBackgroundColor: .systemGray, type: 1),
@@ -36,58 +43,30 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         CalcCollectionViewCellViewModel(title: ".", btnBackgroundColor: .systemGray4, type: 0),
         CalcCollectionViewCellViewModel(title: "=", btnBackgroundColor: .systemOrange, type: 1),
     ]
-    
-    let resultViewLabel: UILabel = {
-        let resultViewLabel = UILabel()
-        resultViewLabel.text = "0"
-        resultViewLabel.textColor = .white
-        resultViewLabel.layer.borderWidth = 2
-        resultViewLabel.textAlignment = .right
-        resultViewLabel.font = UIFont.boldSystemFont(ofSize: 40.0)
-        resultViewLabel.backgroundColor = .systemBackground
-        resultViewLabel.translatesAutoresizingMaskIntoConstraints = false
-        return resultViewLabel
-    }()
-    
-    let calcView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 3
-        layout.itemSize = CGSize(width: 90, height: 90)
-        layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
         
-        let calcView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        calcView.backgroundColor = .black
-        calcView.showsHorizontalScrollIndicator = false
-        calcView.isScrollEnabled = false
-        calcView.contentInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
-        calcView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CalcCollectionViewCell")
-        calcView.translatesAutoresizingMaskIntoConstraints = false
-        return calcView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        calcView.delegate = self
-        calcView.dataSource = self
-        calcView.register(CalcCollectionViewCell.self, forCellWithReuseIdentifier: CalcCollectionViewCell.identifier)
-        view.addSubview(calcView)
-        view.addSubview(resultViewLabel)
-        resultViewLabel.font = resultViewLabel.font.withSize(50)
+        _view.calcView.delegate = self
+        _view.calcView.dataSource = self
+        _view.calcView.register(CalcCollectionViewCell.self, forCellWithReuseIdentifier: CalcCollectionViewCell.identifier)
+        view.addSubview(_view.calcView)
+        view.addSubview(_view.resultViewLabel)
+        _view.resultViewLabel.font = _view.resultViewLabel.font.withSize(50)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         NSLayoutConstraint.activate([
-            resultViewLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
-            resultViewLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0),
-            resultViewLabel.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0),
-            resultViewLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            _view.resultViewLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            _view.resultViewLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0),
+            _view.resultViewLabel.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0),
+            _view.resultViewLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
 
-            calcView.topAnchor.constraint(equalTo: resultViewLabel.safeAreaLayoutGuide.bottomAnchor, constant: 10),
-            calcView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            calcView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            calcView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: 5)
+            _view.calcView.topAnchor.constraint(equalTo: _view.resultViewLabel.safeAreaLayoutGuide.bottomAnchor, constant: 10),
+            _view.calcView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            _view.calcView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            _view.calcView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: 5)
 
         ])
     }
@@ -108,7 +87,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
      }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = calcView.dequeueReusableCell(withReuseIdentifier: CalcCollectionViewCell.identifier, for: indexPath) as? CalcCollectionViewCell else{
+        guard let cell = _view.calcView.dequeueReusableCell(withReuseIdentifier: CalcCollectionViewCell.identifier, for: indexPath) as? CalcCollectionViewCell else{
             return UICollectionViewCell()
         }
         let viewModel = viewModels[indexPath.row]
@@ -120,20 +99,30 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         let viewModel = viewModels[indexPath.row]
         let keyType = viewModel.type
         if keyType == 0 {  // number key
-            if viewModel.title == "." { return }  // handle decimal point - its not an interger
+            if viewModel.title == "." { return }  // handle decimal point - its not an integer
             lastNumberTapped = Int(viewModel.title)!
-            if resultViewLabel.text! == "0" {
-                resultViewLabel.text!  =  String(lastNumberTapped)  // show first number
+            if _view.resultViewLabel.text! == "0" {
+                _view.resultViewLabel.text!  =  String(lastNumberTapped)  // show first number
             } else {
                 if operationToPerform == 0 {
-                    resultViewLabel.text!  +=  String(lastNumberTapped)  // make next number entered
-                    lastNumberTapped = Int(resultViewLabel.text!)!
-                } else {
-                    resultViewLabel.text!  =  String(lastNumberTapped)
+                    _view.resultViewLabel.text!  +=  String(lastNumberTapped)  // make next number entered
+                    lastNumberTapped = Int(_view.resultViewLabel.text!)!
+                } 
+                else {  // second number after selection math operation
+                    if nextNumberTapped == 0 {
+                        nextNumberTapped = Int(viewModel.title)!
+                        _view.resultViewLabel.text!  =  String(nextNumberTapped)
+                    } else {
+                        _view.resultViewLabel.text!  +=  String(nextNumberTapped)
+                        nextNumberTapped = Int(_view.resultViewLabel.text!)!
+                    }
+                    
                 }
             }
             
         } else {   // operation key
+            if nextNumberTapped == 0 && indexPath.row == 18 { return } // ignore '=' if no second number
+
             switch indexPath.row {
             case 0:  // AC
                 operation = 0
@@ -167,65 +156,66 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
             return
         }
 
-        number1 = lastNumberTapped
+        firstNumber = lastNumberTapped
         if calcIntermediateResult == 0 {
-            calcIntermediateResult = number1
+            calcIntermediateResult = firstNumber
+            print(calcIntermediateResult)
         } else {
             switch operationToPerform {  // operartion 0, 1,2, top gray keys, 3=divide  7=mul, 11=minus, 15=add, 18=equal
             case 18:
                 equalTapped()
             
             case 15:
-                calcIntermediateResult += lastNumberTapped
+                calcIntermediateResult +=  nextNumberTapped //lastNumberTapped
             
             case 11:
-                calcIntermediateResult -= lastNumberTapped
+                calcIntermediateResult -= nextNumberTapped //lastNumberTapped
                 
             case 7:
-                calcIntermediateResult *= lastNumberTapped
+                calcIntermediateResult *= nextNumberTapped //lastNumberTapped
                 
             case 3:
-                calcIntermediateResult /= lastNumberTapped
+                calcIntermediateResult /= nextNumberTapped //lastNumberTapped
                 
             case 2:
-                calcIntermediateResult %= lastNumberTapped
+                calcIntermediateResult %= nextNumberTapped //lastNumberTapped
 
             default:
                 return
             }
             
-            resultViewLabel.text!  =  "\(calcIntermediateResult)"
+            _view.resultViewLabel.text!  =  "\(calcIntermediateResult)"
         }
     }
     
    func equalTapped() {
-        guard let num = resultViewLabel.text else { return }
+        guard let num = _view.resultViewLabel.text else { return }
         let number = Int(num)!
         lastNumberTapped = 0
         switch operation {   // 2  3 7 11 15  18
         case 15:
-            let result = number1 + number
-            resultViewLabel.text!  =  "\(result)"
+            let result = firstNumber + number
+            _view.resultViewLabel.text!  =  "\(result)"
             resetInterimValues()
 
-        case 11: let result = number1 - number
-            resultViewLabel.text!  =  "\(result)"
-            number1 = 0
+        case 11: let result = firstNumber - number
+            _view.resultViewLabel.text!  =  "\(result)"
+            firstNumber = 0
             resetInterimValues()
             
-        case 7: let result = number1 * number
-            resultViewLabel.text!  =  "\(result)"
-            number1 = 0
+        case 7: let result = firstNumber * number
+            _view.resultViewLabel.text!  =  "\(result)"
+            firstNumber = 0
             resetInterimValues()
             
-        case 3: let result = number1 / number
-            resultViewLabel.text!  =  "\(result)"
-            number1 = 0
+        case 3: let result = firstNumber / number
+            _view.resultViewLabel.text!  =  "\(result)"
+            firstNumber = 0
             resetInterimValues()
             
-        case 2: let result = number1 % number
-            resultViewLabel.text!  =  "\(result)"
-            number1 = 0
+        case 2: let result = firstNumber % number
+            _view.resultViewLabel.text!  =  "\(result)"
+            firstNumber = 0
             resetInterimValues()
             
         default:
@@ -233,14 +223,15 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
-   func clearTapped() {
-        resultViewLabel.text!  =  "0"
+    func clearTapped() {
+        _view.resultViewLabel.text!  =  "0"
         calcIntermediateResult = 0
-        number1 = 0
-        number2 = 0
+        firstNumber = 0
+        secondNumber = 0
         operation = 0
         calcIntermediateResult = 0
         lastNumberTapped = 0
+        nextNumberTapped = 0
         operationToPerform = 0
     }
     

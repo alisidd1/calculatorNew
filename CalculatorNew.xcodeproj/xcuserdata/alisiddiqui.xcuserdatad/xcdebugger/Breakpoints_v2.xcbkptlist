@@ -23,69 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BE2FF2AA-574F-4B6C-9F54-67DD69129FAE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CalculatorNew/CollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BE2FF2AA-574F-4B6C-9F54-67DD69129FAE - 55b9c37bc470ac1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "CalculatorNew"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "1224">
-               </Location>
-               <Location
-                  uuid = "BE2FF2AA-574F-4B6C-9F54-67DD69129FAE - 55b9c37bc470ac1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "CalculatorNew"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "1112">
-               </Location>
-               <Location
-                  uuid = "BE2FF2AA-574F-4B6C-9F54-67DD69129FAE - 55b9c37bc470ac1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "CalculatorNew"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "1152">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4458329C-18D0-4748-B067-BCE7562F2908"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -93,8 +30,8 @@
             filePath = "CalculatorNew/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "updateMathOperation(operation:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -109,10 +46,42 @@
             filePath = "CalculatorNew/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "updateMathOperation(operation:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "17627FA4-2406-4930-90D8-AD946B30DE85 - bdbdbf9c2c33a0f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "808">
+               </Location>
+               <Location
+                  uuid = "17627FA4-2406-4930-90D8-AD946B30DE85 - bdbdbf9c2c33a0b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -125,25 +94,277 @@
             filePath = "CalculatorNew/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "equalTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B927220-21BB-45E4-B5CD-D814A8FA6EE9 - 32db5ed633cdac60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.equalTapped() -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "193"
+                  endingLineNumber = "193"
+                  offsetFromSymbolStart = "1460">
+               </Location>
+               <Location
+                  uuid = "9B927220-21BB-45E4-B5CD-D814A8FA6EE9 - 32db5ed633cdac60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.equalTapped() -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "193"
+                  endingLineNumber = "193"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE571C27-87BF-4793-85AC-007B739724BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EE571C27-87BF-4793-85AC-007B739724BF - 55b9c37bc470afd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "EE571C27-87BF-4793-85AC-007B739724BF - 55b9c37bc470afd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "3736">
+               </Location>
+               <Location
+                  uuid = "EE571C27-87BF-4793-85AC-007B739724BF - 55b9c37bc470ada2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "3736">
+               </Location>
+               <Location
+                  uuid = "EE571C27-87BF-4793-85AC-007B739724BF - 55b9c37bc470ada2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "5260">
+               </Location>
+               <Location
+                  uuid = "EE571C27-87BF-4793-85AC-007B739724BF - 55b9c37bc470ada2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "5276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87399EB8-9CCE-4482-9F54-CB553722D558"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "87399EB8-9CCE-4482-9F54-CB553722D558 - 55b9c37bc470ad64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "3820">
+               </Location>
+               <Location
+                  uuid = "87399EB8-9CCE-4482-9F54-CB553722D558 - 55b9c37bc470ad64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "3804">
+               </Location>
+               <Location
+                  uuid = "87399EB8-9CCE-4482-9F54-CB553722D558 - 55b9c37bc470ad64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "3848">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6815DAA-BED2-412D-849F-D702770B79DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A6815DAA-BED2-412D-849F-D702770B79DC - 55b9c37bc470aec9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "2956">
+               </Location>
+               <Location
+                  uuid = "A6815DAA-BED2-412D-849F-D702770B79DC - 55b9c37bc470aec9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CollectionViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "2996">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3731F89-D3F0-4CFD-BA92-F8F93905D7BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "updateMathOperation(operation:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD296C1E-41AF-4C67-B7AB-51525FB0A814"
-            shouldBeEnabled = "Yes"
+            uuid = "17ADBE5E-3580-4F71-A769-E49DE03DA245"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculatorNew/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "updateMathOperation(operation:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
