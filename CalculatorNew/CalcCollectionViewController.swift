@@ -1,5 +1,5 @@
 //
-//  CollectionViewController.swift
+//  CalcCollectionViewController.swift
 //  CalculatorNew
 //
 //  Created by Ali Siddiqui on 1/28/24.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController {
+class CalcCollectionViewController: UIViewController {
     
-    private let _view = CollectionView()
+    private let _view = CalcCollectionView()
     
     override func loadView() {
         super.loadView()
