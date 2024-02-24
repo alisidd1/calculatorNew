@@ -44,6 +44,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC99602A2B8A734C0024EBF3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCA8E97A2B66B6E900043B61 /* CalcCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC99602B2B8A73660024EBF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC54620F2B8641F10069A5A5 /* CalcCollectionView.swift */,
+				FCA8E98C2B66DE8D00043B61 /* CalcCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC99602C2B8A737D0024EBF3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FCFA3FC12B86D3F3009E3A83 /* CalcCollectionViewViewModel.swift */,
+				FC5461CC2B815FE80069A5A5 /* CalcCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FC99602D2B8A73A00024EBF3 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FCA8E97F2B66B6EB00043B61 /* Assets.xcassets */,
+				FCA8E9762B66B6E900043B61 /* AppDelegate.swift */,
+				FCA8E9782B66B6E900043B61 /* SceneDelegate.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		FCA8E96A2B66B6E900043B61 = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +99,10 @@
 		FCA8E9752B66B6E900043B61 /* CalculatorNew */ = {
 			isa = PBXGroup;
 			children = (
-				FCA8E9762B66B6E900043B61 /* AppDelegate.swift */,
-				FCA8E9782B66B6E900043B61 /* SceneDelegate.swift */,
-				FCA8E97A2B66B6E900043B61 /* CalcCollectionViewController.swift */,
-				FC54620F2B8641F10069A5A5 /* CalcCollectionView.swift */,
-				FCFA3FC12B86D3F3009E3A83 /* CalcCollectionViewViewModel.swift */,
-				FC5461CC2B815FE80069A5A5 /* CalcCollectionViewCellViewModel.swift */,
-				FCA8E98C2B66DE8D00043B61 /* CalcCollectionViewCell.swift */,
-				FCA8E97F2B66B6EB00043B61 /* Assets.xcassets */,
+				FC99602A2B8A734C0024EBF3 /* Controllers */,
+				FC99602C2B8A737D0024EBF3 /* ViewModels */,
+				FC99602B2B8A73660024EBF3 /* Views */,
+				FC99602D2B8A73A00024EBF3 /* Misc */,
 				FCA8E9842B66B6EB00043B61 /* Info.plist */,
 				FCA8E9812B66B6EB00043B61 /* LaunchScreen.storyboard */,
 				FC54620E2B852FE30069A5A5 /* README.md */,

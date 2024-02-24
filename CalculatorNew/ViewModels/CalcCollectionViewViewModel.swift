@@ -8,16 +8,14 @@
 import UIKit
 
 
-protocol UpdateResult {
-    var result: String? {get set}
+protocol UpdateResultDelegate {
     func getResultViewLabel() -> String
     func updateResultViewLabel(result: String)
 }
 
 class CalcCollectionViewViewModel  {
     
-    var delegate: UpdateResult?
-    
+    var delegate: UpdateResultDelegate?
     var firstNumber = 0, secondNumber = 0, operation = 0
     var calcIntermediateResult = 0
     var lastNumberTapped = 0
@@ -48,13 +46,6 @@ class CalcCollectionViewViewModel  {
     
     func setupViewModelFor(index: Int) {
         
-        
-        //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        handleSelectedCalculatorKey() //key: indexPath.row)
-        //
-        //
-        //        CalcViewModel.setupViewModelFor(index: indexPath.row)
-        
         let viewModel = self.cellViewModels[index]
         
         let keyType = viewModel.type
@@ -65,28 +56,26 @@ class CalcCollectionViewViewModel  {
             let resultLabel = delegate?.getResultViewLabel()
             
             if resultLabel == "0" {
-//                if resultViewLabel.text! == "0" {
-//                resultViewLabel.text!  =  String(lastNumberTapped)  // show first number
-                delegate?.updateResultViewLabel(result: String(lastNumberTapped) )
+                let text = delegate?.getResultViewLabel()
+                if text == "0" {
+                    delegate?.updateResultViewLabel(result: String(lastNumberTapped) )
+                }
             } else {
                 if operationToPerform == 0 {
-  //                  resultViewLabel.text!  +=  String(lastNumberTapped)  // make next number entered
                     let text = delegate?.getResultViewLabel()
-                    delegate?.updateResultViewLabel(result: text! + String(lastNumberTapped))
-                    
-                    lastNumberTapped = Int(text!)! + lastNumberTapped
+                    let multiDigitNumber = text! + String(lastNumberTapped)
+                    delegate?.updateResultViewLabel(result: multiDigitNumber)
+                    lastNumberTapped = Int(multiDigitNumber)!
                 }
                 else {  // second number after selection math operation
                     if nextNumberTapped == 0 {
                         nextNumberTapped = Int(viewModel.title)!
-       //                 resultViewLabel.text!  =  String(nextNumberTapped)
                         delegate?.updateResultViewLabel(result: String(nextNumberTapped))
                     } else {
-       //                 resultViewLabel.text!  +=  String(nextNumberTapped)
                         let text = delegate?.getResultViewLabel()
                         delegate?.updateResultViewLabel(result: text! + String(nextNumberTapped))
-
-                        nextNumberTapped = Int(text!)! + nextNumberTapped
+                        let multiDigitNumber = text! + String(nextNumberTapped)
+                        nextNumberTapped = Int(multiDigitNumber)!
                     }
                     
                 }
@@ -129,9 +118,10 @@ class CalcCollectionViewViewModel  {
         }
         
         firstNumber = lastNumberTapped
+        print("firstNumber : \(firstNumber ) " )
         if calcIntermediateResult == 0 {
             calcIntermediateResult = firstNumber
-            print(calcIntermediateResult)
+            print("calcIntermediateResult:   \(calcIntermediateResult)")
         } else {
             switch operationToPerform {  // operartion 0, 1,2, top gray keys, 3=divide  7=mul, 11=minus, 15=add, 18=equal
             case 18:
@@ -156,44 +146,37 @@ class CalcCollectionViewViewModel  {
                 return
             }
             
-       //     resultViewLabel.text!  =  "\(calcIntermediateResult)"
             delegate?.updateResultViewLabel(result: String(calcIntermediateResult))
-
         }
     }
     
     func equalTapped() {
-//        guard let num = resultViewLabel.text else { return }
         guard let num = delegate?.getResultViewLabel() else { return }
         let number = Int(num)!
+        print("number: \(number)")
         lastNumberTapped = 0
         switch operation {   // 2  3 7 11 15  18
         case 15:
             let result = firstNumber + number
-//           resultViewLabel.text!  =  "\(result)"
             delegate?.updateResultViewLabel(result: String(result))
             resetInterimValues()
             
         case 11: let result = firstNumber - number
- //           resultViewLabel.text!  =  "\(result)"
             delegate?.updateResultViewLabel(result: String(result))
             firstNumber = 0
             resetInterimValues()
             
         case 7: let result = firstNumber * number
-//            resultViewLabel.text!  =  "\(result)"
             delegate?.updateResultViewLabel(result: String(result))
             firstNumber = 0
             resetInterimValues()
             
         case 3: let result = firstNumber / number
- //           resultViewLabel.text!  =  "\(result)"
             delegate?.updateResultViewLabel(result: String(result))
             firstNumber = 0
             resetInterimValues()
             
         case 2: let result = firstNumber % number
-//            resultViewLabel.text!  =  "\(result)"
             delegate?.updateResultViewLabel(result: String(result))
             firstNumber = 0
             resetInterimValues()
@@ -204,7 +187,6 @@ class CalcCollectionViewViewModel  {
     }
     
     func clearTapped() {
-//        resultViewLabel.text!  =  "0"
         delegate?.updateResultViewLabel(result: "0")
         calcIntermediateResult = 0
         firstNumber = 0
