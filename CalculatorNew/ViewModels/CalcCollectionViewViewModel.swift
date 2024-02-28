@@ -53,7 +53,11 @@ class CalcCollectionViewViewModel  {
             if viewModel.title == "." { return }  // handle decimal point - its not an integer
             lastNumberTapped = Int(viewModel.title)!
             
-            let resultLabel = delegate?.getResultViewLabel()
+            var resultLabel = delegate?.getResultViewLabel()
+            if nextNumberTapped == 0 && operationToPerform == 0 && resultLabel != "0"{
+                delegate?.updateResultViewLabel(result: "0")
+                resultLabel = "0"
+            }
             
             if resultLabel == "0" {
                 let text = delegate?.getResultViewLabel()
@@ -104,7 +108,8 @@ class CalcCollectionViewViewModel  {
                 operationToPerform = 15
             case 18:    // equal
                 operation = 18
-            default:
+//                operationToPerform = 18
+           default:
                 return
             }
             updateMathOperation(operation: operation)
@@ -147,13 +152,14 @@ class CalcCollectionViewViewModel  {
             }
             
             delegate?.updateResultViewLabel(result: String(calcIntermediateResult))
+  //          resetInterimValues()
         }
     }
     
     func equalTapped() {
         guard let num = delegate?.getResultViewLabel() else { return }
         let number = Int(num)!
-        print("number: \(number)")
+        print("equal tapped: number on rsult label: \(number)")
         lastNumberTapped = 0
         switch operation {   // 2  3 7 11 15  18
         case 15:
@@ -184,6 +190,9 @@ class CalcCollectionViewViewModel  {
         default:
             return
         }
+        
+        delegate?.updateResultViewLabel(result: String(calcIntermediateResult))
+
     }
     
     func clearTapped() {

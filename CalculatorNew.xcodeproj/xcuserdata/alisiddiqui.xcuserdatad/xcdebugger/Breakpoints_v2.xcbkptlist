@@ -68,5 +68,292 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08E387FC-0F2A-485A-BF18-59E9FBD1F764"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "setupViewModelFor(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "578BC883-DE7A-4FFB-9DE3-F567D73E80A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setupViewModelFor(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5806335-9D43-47D9-9B82-D773CACE550B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "equalTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A5806335-9D43-47D9-9B82-D773CACE550B - db0f67a4c0413cfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.equalTapped() -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "A5806335-9D43-47D9-9B82-D773CACE550B - db0f67a4c0413cfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.equalTapped() -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37146E2E-DB02-49EC-99FD-926ACFD935D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "updateMathOperation(operation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "37146E2E-DB02-49EC-99FD-926ACFD935D8 - 9cf58edd8b27a738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "37146E2E-DB02-49EC-99FD-926ACFD935D8 - 9cf58edd8b27a77a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "37146E2E-DB02-49EC-99FD-926ACFD935D8 - 9cf58edd8b27a77a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1040">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AB58CF9-EF35-482B-A7D3-136463AD353A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "updateMathOperation(operation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8AB58CF9-EF35-482B-A7D3-136463AD353A - 9cf58edd8b27a485"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "8AB58CF9-EF35-482B-A7D3-136463AD353A - 9cf58edd8b27a4a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.updateMathOperation(operation: Swift.Int) -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "996">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6B8C932-932E-422E-B4FE-540DE03F7675"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "equalTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B6B8C932-932E-422E-B4FE-540DE03F7675 - db0f67a4c0413b79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.equalTapped() -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "3044">
+               </Location>
+               <Location
+                  uuid = "B6B8C932-932E-422E-B4FE-540DE03F7675 - db0f67a4c041389a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculatorNew.CalcCollectionViewViewModel.equalTapped() -&gt; ()"
+                  moduleName = "CalculatorNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alisiddiqui/Desktop/projects/CalculatorNew/CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "2864">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4D7AA6A-6B15-4DDB-BEA8-8A96F29ED3D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "updateMathOperation(operation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4286A2F6-E78B-4EA1-B448-0F12785824D3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "updateMathOperation(operation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "555695D7-0990-4977-9B5A-39F323F6F529"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculatorNew/ViewModels/CalcCollectionViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "setupViewModelFor(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
